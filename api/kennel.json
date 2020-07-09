@@ -3,5 +3,31 @@
     { "id": 1, "name": "Doodles", "breed": "Poodle" },
     { "id": 2, "name": "Decker", "breed": "German Shepherd" },
     { "id": 3, "name": "Esme", "breed": "Pitbull" }
+  ],
+
+
+
+  "location": [
+    { "id": 1, "name": "Nashville North" },
+    { "id": 2, "name": "Nashville South" }
+    
+  ],
+
+"employee": [
+    { "id": 1, "name": "Jessica Younker"},
+    { "id": 2, "name": "Jordan Nelson" },
+    { "id": 3, "name": "Zoe LeBlanc" },
+    { "id": 4, "name": "Blaise Roberts" },
+    { "id": 5, "name": "Blair McMillin" }
+  ],
+
+  "owner": [
+    { "id": 1, "name": "Brenda Long" },
+    { "id": 2, "name": "Rosey Rose" }
+    
   ]
+
+
+
 }
+    
