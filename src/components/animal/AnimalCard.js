@@ -1,7 +1,7 @@
 import React from "react";
 import "../Kennel.css";
 
-const AnimalCard = () => {
+const AnimalCard = (props) => {
   return (
     <div className="card">
       <div className="card-content">
@@ -12,7 +12,7 @@ const AnimalCard = () => {
           />
         </picture>
         <h3>
-          Name: <span className="card-petname">Doodles</span>
+                  Name: <span className="card-petname">{props.name}</span>
         </h3>
         <p>Breed: Poodle</p>
       </div>
