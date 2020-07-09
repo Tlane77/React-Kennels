@@ -9,19 +9,21 @@ const AnimalCard = (props) => {
           <img src={require("./dog.png")} alt="My Dog" />
         </picture>
         <h3>
-          Name: <span className="card-petname">{props.name}</span>
+          Name: <span className="card-petname">{props.animals.name}</span>
         </h3>
         <p>
-          Breed: <span className="card-petname">{props.breed}</span>
+          Breed: <span className="card-petname">{props.animals.breed}</span>
         </p>
         <p>
-          Quote: <span className="card-petname">{props.quote}</span>
+          Quote: <span className="card-petname">{props.animals.quote}</span>
         </p>
         <p>
-          Picture: <span className="card-petname">{props.picture}</span>
+          Picture: <span className="card-petname">{props.animals.picture}</span>
         </p>
+        <button type="button" onClick={() => props.deleteAnimal(props.animals.id)}>Discharge</button>
       </div>
-    </div>
+      </div>
+    
   );
 };
 

@@ -7,4 +7,9 @@ export default {
   getAll() {
     return fetch(`${remoteURL}/owner`).then((result) => result.json());
   },
+  delete(id) {
+    return fetch(`${remoteURL}/owner/${id}`, {
+      method: "DELETE",
+    }).then((result) => result.json());
+  },
 };

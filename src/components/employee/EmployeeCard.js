@@ -10,16 +10,18 @@ const EmployeeCard = (props) => {
           <img src={require("./employee.png")} alt="Employee" />
         </picture>
         <h3>
-          Employee: <span className="card-employeename">{props.name}</span>
+          Employee: <span className="card-employeename">{props.employees.name}</span>
         </h3>
         <p>
-          Quote: <span className="card-employeename">{props.quote}</span>
+          Quote: <span className="card-employeename">{props.employees.quote}</span>
         </p>
         <p>
-          Picture: <span className="card-employeename">{props.picture}</span>
+          Picture: <span className="card-employeename">{props.employees.picture}</span>
         </p>
+        <button type="button" onClick={() => props.deleteEmployee(props.employees.id)}>Discharge</button>
       </div>
-    </div>
+      </div>
+    
   );
 };
 

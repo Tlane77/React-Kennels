@@ -1,34 +1,91 @@
 {
   "animals": [
-    { "id": 1, "name": "Doodles", "breed": "Poodle","quote": "Top Rated Doggie DayCare in Nashville","picture": "./dog.png" },
-    { "id": 2, "name": "Decker", "breed": "German Shepherd","quote": "Top Rated Doggie DayCare in Nashville","picture": "./dog.png" },
-    { "id": 3, "name": "Esme", "breed": "Pitbull","quote": "Top Rated Doggie DayCare in Nashville","picture": "./dog.png" }
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "./dog.png"
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Shepherd",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "./dog.png"
+    },
+    {
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "./dog.png"
+    }
   ],
-
-
-
-  "location": [
-    { "id": 1, "name": "Nashville North Doggie DayCare", "quote": "Top Rated Doggie DayCare in Nashville","picture": "./location.png" },
-    { "id": 2, "name": "Nashville South Doggie DayCare", "quote": "Top Rated Doggie DayCare in Nashville","picture": "./location.png" },
-    { "id": 3, "name": "Nashville East Doggie DayCare", "quote": "Top Rated Doggie DayCare in Nashville","picture": "./location.png" }
-    
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North Doggie DayCare",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "./location.png"
+    },
+    {
+      "id": 2,
+      "name": "Nashville South Doggie DayCare",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "./location.png"
+    },
+    {
+      "id": 3,
+      "name": "Nashville East Doggie DayCare",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "./location.png"
+    }
   ],
-
-"employee": [
-    { "id": 1, "name": "Jessica Younker", "quote": "Top Rated Doggie DayCare in Nashville","picture": "./employee.png"},
-    { "id": 2, "name": "Jordan Nelson", "quote": "Top Rated Doggie DayCare in Nashville","picture": "./employee.png" },
-    { "id": 3, "name": "Zoe LeBlanc", "quote": "Top Rated Doggie DayCare in Nashville","picture": "./employee.png" },
-    { "id": 4, "name": "Blaise Roberts", "quote": "Top Rated Doggie DayCare in Nashville","picture": "./employee.png" },
-    { "id": 5, "name": "Blair McMillin", "quote": "Top Rated Doggie DayCare in Nashville","picture": "./employee.png" }
+  "employees": [
+    {
+      "id": 1,
+      "name": "Jessica Younker",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "./employee.png"
+    },
+    {
+      "id": 2,
+      "name": "Jordan Nelson",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "./employee.png"
+    },
+    {
+      "id": 3,
+      "name": "Zoe LeBlanc",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "./employee.png"
+    },
+    {
+      "id": 4,
+      "name": "Blaise Roberts",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "./employee.png"
+    },
+    {
+      "id": 5,
+      "name": "Blair McMillin",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "./employee.png"
+    }
   ],
-
-  "owner": [
-    { "id": 1, "name": "Brenda Long","quote": "Top Rated Doggie DayCare in Nashville","picture": "./owner.png" },
-    { "id": 2, "name": "Rosey Rose","quote": "Top Rated Doggie DayCare in Nashville","picture": "./owner.png" }
-    
+  "owners": [
+    {
+      "id": 1,
+      "name": "Brenda Long",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "./owner.png"
+    },
+    {
+      "id": 2,
+      "name": "Rosey Rose",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "./owner.png"
+    }
   ]
-
-
-
 }
-    

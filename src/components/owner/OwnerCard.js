@@ -10,17 +10,19 @@ const OwnerCard = (props) => {
           <img src={require("./owner.png")} alt="Owner" />
         </picture>
         <h3>
-          Owner: <span className="card-ownername">{props.name}</span>
+          Owner: <span className="card-ownername">{props.owners.name}</span>
         </h3>
         <p>It's all about the Love!</p>
         <p>
-          Quote: <span className="card-ownername">{props.quote}</span>
+          Quote: <span className="card-ownername">{props.owners.quote}</span>
         </p>
         <p>
-          Picture: <span className="card-ownername">{props.picture}</span>
+          Picture: <span className="card-ownername">{props.owners.picture}</span>
         </p>
+        <button type="button" onClick={() => props.deleteOwner(props.owners.id)}>Discharge</button>
       </div>
-    </div>
+      </div>
+    
   );
 };
 

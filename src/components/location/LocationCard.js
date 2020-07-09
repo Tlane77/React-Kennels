@@ -10,17 +10,19 @@ const LocationCard = (props) => {
           <img src={require("./location.png")} alt="Location" />
         </picture>
         <h3>
-          Location: <span className="card-locationname">{props.name}</span>
+          Location: <span className="card-locationname">{props.locations.name}</span>
         </h3>
         <p>Title: Island of Pets</p>
         <p>
-          Quote: <span className="card-locationname">{props.quote}</span>
+          Quote: <span className="card-locationname">{props.locations.quote}</span>
         </p>
         <p>
-          Picture: <span className="card-locationname">{props.picture}</span>
+          Picture: <span className="card-locationname">{props.locations.picture}</span>
         </p>
+        <button type="button" onClick={() => props.deleteLocation(props.locations.id)}>Discharge</button>
       </div>
-    </div>
+      </div>
+    
   );
 };
 
