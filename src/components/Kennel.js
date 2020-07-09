@@ -5,6 +5,7 @@ import ApplicationViews from "./ApplicationViews";
 
 import "./Kennel.css";
 
+
 const Kennel = () => {
   return (
     <>
