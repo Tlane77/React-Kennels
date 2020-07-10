@@ -16,7 +16,7 @@
     },
     {
       "id": 3,
-      "name": "Esme", 
+      "name": "Esme",
       "breed": "Pit Bull",
       "quote": "Top Rated Doggie DayCare in Nashville",
       "picture": "./dogC.png"
@@ -69,7 +69,7 @@
     },
     {
       "id": 5,
-      "name": "Blair McMillin",
+      "name": "Jay Z",
       "quote": "Top Rated Doggie DayCare in Nashville",
       "picture": "./employee.png"
     }

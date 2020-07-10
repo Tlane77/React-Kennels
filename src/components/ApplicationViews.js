@@ -41,7 +41,10 @@ const ApplicationViews = () => {
         render={(props) => {
           // Pass the animalId to the AnimalDetailComponent
           return (
-            <AnimalDetail animalId={parseInt(props.match.params.animalId)} />
+            <AnimalDetail
+              animalId={parseInt(props.match.params.animalId)}
+              {...props}
+            />
           );
         }}
       />
@@ -57,7 +60,9 @@ const ApplicationViews = () => {
         render={(props) => {
           // Pass the locationId to the LocationDetailComponent
           return (
-            <LocationDetail locationId={parseInt(props.match.params.locationId)}
+            <LocationDetail
+              locationId={parseInt(props.match.params.locationId)}
+              {...props}
             />
           );
         }}
@@ -82,7 +87,10 @@ const ApplicationViews = () => {
         render={(props) => {
           // Pass the employeeId to the EmployeeDetailComponent
           return (
-            <EmployeeDetail employeeId={parseInt(props.match.params.employeeId)} />
+            <EmployeeDetail
+              employeeId={parseInt(props.match.params.employeeId)}
+              {...props}
+            />
           );
         }}
         />
@@ -98,7 +106,10 @@ const ApplicationViews = () => {
         render={(props) => {
           // Pass the ownerId to the OwnerDetailComponent
           return (
-            <OwnerDetail ownerId={parseInt(props.match.params.ownerId)} />
+            <OwnerDetail
+              ownerId={parseInt(props.match.params.ownerId)}
+              {...props}
+            />
           );
         }}
         />

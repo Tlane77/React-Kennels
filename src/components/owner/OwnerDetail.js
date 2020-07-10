@@ -8,6 +8,7 @@ const OwnerDetail = (props) => {
     quote: "",
     picture: ""
   });
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     //get(id) from OwnerManager and hang on to the data; put it into state
@@ -17,8 +18,17 @@ const OwnerDetail = (props) => {
         quote: owner.quote,
         picture: owner.picture
       });
+      setIsLoading(false);
     });
   }, [props.ownerId]);
+
+  const handleDelete = () => {
+    //invoke the delete function in AnimalManger and re-direct to the animal list.
+    setIsLoading(true);
+    OwnerManager.delete(props.ownerId).then(() =>
+      props.history.push("/owners")
+    );
+  };
 
   return (
     <div className="card">
@@ -30,6 +40,9 @@ const OwnerDetail = (props) => {
           Name: <span style={{ color: "darkslategrey" }}>{owner.name}</span>
         </h3>
         <p>Quote: {owner.quote}</p>
+        <button type="button" disabled={isLoading} onClick={handleDelete}>
+          Discharge
+        </button>
       </div>
     </div>
   );

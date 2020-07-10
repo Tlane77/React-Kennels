@@ -8,6 +8,7 @@ const EmployeeDetail = (props) => {
     quote: "",
     picture: "",
   });
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     //get(id) from AnimalManager and hang on to the data; put it into state
@@ -16,8 +17,17 @@ const EmployeeDetail = (props) => {
         employees: employee.name,
         quote: employee.quote,
       });
+      setIsLoading(false);
     });
   }, [props.employeeId]);
+
+  const handleDelete = () => {
+    //invoke the delete function in AnimalManger and re-direct to the animal list.
+    setIsLoading(true);
+    EmployeeManager.delete(props.employeeId).then(() =>
+      props.history.push("/employees")
+    );
+  };
 
   return (
     <div className="card">
@@ -29,6 +39,9 @@ const EmployeeDetail = (props) => {
           Name: <span style={{ color: "darkslategrey" }}>{employee.name}</span>
         </h3>
         <p>Quote: {employee.quote}</p>
+        <button type="button" disabled={isLoading} onClick={handleDelete}>
+          FIRE!
+        </button>
       </div>
     </div>
   );
