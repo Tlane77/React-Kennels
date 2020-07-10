@@ -8,7 +8,11 @@ const EmployeeCard = (props) => {
     <div className="card">
       <div className="card-content">
         <picture>
-          <img src={require("./employee.png")} alt="Employee" />
+          <img
+            className="employeeImg"
+            src={require(`${props.employees.picture}`)}
+            alt="Employee"
+          />
         </picture>
         <h3>
           Employee:{" "}

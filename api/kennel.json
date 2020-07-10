@@ -5,21 +5,21 @@
       "name": "Doodles",
       "breed": "Poodle",
       "quote": "Top Rated Doggie DayCare in Nashville",
-      "picture": "./dog.png"
+      "picture": "./dogA.png"
     },
     {
       "id": 2,
       "name": "Decker",
       "breed": "German Shepherd",
       "quote": "Top Rated Doggie DayCare in Nashville",
-      "picture": "./dog.png"
+      "picture": "./dogB.png"
     },
     {
       "id": 3,
       "name": "Ezla", 
       "breed": "German Shepherd",
       "quote": "Top Rated Doggie DayCare in Nashville",
-      "picture": "./dog.png"
+      "picture": "./dogC.png"
     }
   ],
   "locations": [

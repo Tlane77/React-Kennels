@@ -7,7 +7,7 @@ const AnimalCard = (props) => {
     <div className="card">
       <div className="card-content">
         <picture>
-          <img src={require("./dog.png")} alt="My Dog" />
+          <img className="animalImg" src={require(`${props.animals.picture}`)} alt="My Dog" />
         </picture>
         <h3>
           Name: <span className="card-petname">{props.animals.name}</span>
@@ -18,9 +18,7 @@ const AnimalCard = (props) => {
         <p>
           Quote: <span className="card-petname">{props.animals.quote}</span>
         </p>
-        <p>
-          Picture: <span className="card-petname">{props.animals.picture}</span>
-        </p>
+        
         <button
           type="button"
           onClick={() => props.deleteAnimal(props.animals.id)}

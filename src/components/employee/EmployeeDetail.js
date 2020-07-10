@@ -33,5 +33,5 @@ const EmployeeDetail = (props) => {
     </div>
   );
 };
-// Remember to show individual animals in url use id(http://localhost:3000/animals/1) aka route parameter
+// Remember to show individual employees in url use id(http://localhost:3000/employees/1) aka route parameter
 export default EmployeeDetail;
