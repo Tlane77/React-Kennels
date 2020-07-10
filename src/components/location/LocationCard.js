@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import "../Kennel.css";
 import "./Location.css";
 
@@ -10,19 +11,29 @@ const LocationCard = (props) => {
           <img src={require("./location.png")} alt="Location" />
         </picture>
         <h3>
-          Location: <span className="card-locationname">{props.locations.name}</span>
+          Location:{" "}
+          <span className="card-locationname">{props.locations.name}</span>
         </h3>
         <p>Title: Island of Pets</p>
         <p>
-          Quote: <span className="card-locationname">{props.locations.quote}</span>
+          Quote:{" "}
+          <span className="card-locationname">{props.locations.quote}</span>
         </p>
         <p>
-          Picture: <span className="card-locationname">{props.locations.picture}</span>
+          Picture:{" "}
+          <span className="card-locationname">{props.locations.picture}</span>
         </p>
-        <button type="button" onClick={() => props.deleteLocation(props.locations.id)}>Discharge</button>
+        <button
+          type="button"
+          onClick={() => props.deleteLocation(props.locations.id)}
+        >
+          Discharge
+        </button>
+        <Link to={`/locations/${props.locations.id}`}>
+          <button>Details</button>
+        </Link>
       </div>
-      </div>
-    
+    </div>
   );
 };
 

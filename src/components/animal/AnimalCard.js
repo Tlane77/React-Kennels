@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import "../Kennel.css";
 import "./Animal.css";
 const AnimalCard = (props) => {
@@ -20,10 +21,17 @@ const AnimalCard = (props) => {
         <p>
           Picture: <span className="card-petname">{props.animals.picture}</span>
         </p>
-        <button type="button" onClick={() => props.deleteAnimal(props.animals.id)}>Discharge</button>
+        <button
+          type="button"
+          onClick={() => props.deleteAnimal(props.animals.id)}
+        >
+          Discharge
+        </button>
+        <Link to={`/animals/${props.animals.id}`}>
+          <button>Details</button>
+        </Link>
       </div>
-      </div>
-    
+    </div>
   );
 };
 

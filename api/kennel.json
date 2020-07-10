@@ -16,8 +16,8 @@
     },
     {
       "id": 3,
-      "name": "Esme",
-      "breed": "Pitbull",
+      "name": "Ezla", 
+      "breed": "German Shepherd",
       "quote": "Top Rated Doggie DayCare in Nashville",
       "picture": "./dog.png"
     }
