@@ -45,3 +45,7 @@
 .card button:hover {
   background-color: darkblue;
 }
+
+.animalImg {
+  border-radius: 50%
+}

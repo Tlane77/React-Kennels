@@ -45,3 +45,7 @@
 .card button:hover {
   background-color: darkblue;
 }
+
+.employeeImg {
+  border-radius: 50%
+}

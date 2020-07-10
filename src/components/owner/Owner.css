@@ -45,3 +45,7 @@
 .card button:hover {
   background-color: darkblue;
 }
+
+.ownerImg {
+  border-radius: 50%
+}

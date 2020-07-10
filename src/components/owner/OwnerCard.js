@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+
 import React from "react";
 import "./Owner.css";
+import { Link } from "react-router-dom";
 // import "../Kennel.css";
 
 const OwnerCard = (props) => {

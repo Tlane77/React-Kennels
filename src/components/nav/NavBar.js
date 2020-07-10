@@ -23,17 +23,17 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/location">
+            <Link className="nav-link" to="/locations">
               Locations
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/employee">
+            <Link className="nav-link" to="/employees">
               Employees
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/owner">
+            <Link className="nav-link" to="/owners">
               Owners
             </Link>
           </li>
