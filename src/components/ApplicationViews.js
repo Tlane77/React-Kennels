@@ -18,6 +18,7 @@ import AnimalEditForm from "./animal/AnimalEditForm"
 import LocationEditForm from "./location/LocationEditForm";
 import EmployeeEditForm from "./employee/EmployeeEditForm";
 import OwnerEditForm from "./owner/OwnerEditForm";
+import EmployeeWithAnimals from "./employee/EmployeeWithAnimals";
 
 // import AnimalCard from "./animal/AnimalCard";
 // only include these once they are built - previous practice exercise
@@ -79,7 +80,6 @@ const ApplicationViews = () => {
           }
         }}
       />
-     
 
       <Route
         path="/animals/new"
@@ -149,7 +149,8 @@ const ApplicationViews = () => {
         }}
       />
       <Route
-        exact path="/employees/:employeeId(\d+)"
+        exact
+        path="/employees/:employeeId(\d+)"
         render={(props) => {
           // Pass the employeeId to the EmployeeDetailComponent
           return (
@@ -215,6 +216,12 @@ const ApplicationViews = () => {
         path="/owners/new"
         render={(props) => {
           return <OwnerForm {...props} />;
+        }}
+      />
+      <Route
+        path="/employees/:employeeId(\d+)/details"
+        render={(props) => {
+          return <EmployeeWithAnimals {...props} />;
         }}
       />
     </React.Fragment>

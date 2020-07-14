@@ -1,11 +1,42 @@
 {
   "animals": [
     {
-      "id": 2,
-      "name": "Decker",
+      "id": 1,
+      "name": "Doodles",
       "breed": "German Shepherd",
       "quote": "Top Rated Doggie DayCare in Nashville",
-      "picture": "dogB.png"
+      "picture": "dogA.png",
+      "employeeId": "5"
+    },
+    {
+      "id": 2,
+      "name": "Dougie",
+      "breed": "German Shepherd",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "dogB.png",
+      "employeeId": "2"
+    },
+    {
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "dogB.png",
+      "employeeId": 1
+    },
+    {
+      "id": 4,
+      "name": "Jack",
+      "breed": "Big cat",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "dogB.png",
+      "employeeId": 1
+    },
+    {
+      "name": "Angus",
+      "breed": "Gerbil",
+      "id": 5,
+      "employeeId": 2
     }
   ],
   "locations": [
@@ -39,28 +70,38 @@
       "id": 2,
       "name": "Jordan Nelson",
       "quote": "Top Rated Doggie DayCare in Nashville",
-      "picture": "employee.png"
+      "picture": "employee.png",
+      "employeeId": 2
     },
     {
       "id": 3,
       "name": "Zoe LeBlanc",
       "quote": "Top Rated Doggie DayCare in Nashville",
-      "picture": "employee.png"
+      "picture": "employee.png",
+      "employeeId": 3
     },
     {
       "id": 4,
       "name": "Blaise Roberts",
       "quote": "Top Rated Doggie DayCare in Nashville",
-      "picture": "employee.png"
+      "picture": "employee.png",
+      "employeeId": 4
     },
     {
       "id": 5,
       "name": "Jay Z",
       "quote": "Top Rated Doggie DayCare in Nashville",
-      "picture": "employee.png"
+      "picture": "employee.png",
+      "employeeId": 5
     }
   ],
   "owners": [
+    {
+      "id": 1,
+      "name": "Susie Cutie",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "owner.png"
+    },
     {
       "id": 2,
       "name": "Rosey Rose",

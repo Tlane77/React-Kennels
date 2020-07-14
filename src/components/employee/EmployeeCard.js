@@ -31,7 +31,9 @@ const EmployeeCard = (props) => {
         </p> */}
         <button
           type="button"
-          onClick={() => props.history.push(`/employees/${props.employees.id}/edit`)}
+          onClick={() =>
+            props.history.push(`/employees/${props.employees.id}/edit`)
+          }
         >
           Edit
         </button>
@@ -41,9 +43,14 @@ const EmployeeCard = (props) => {
         >
           Discharge
         </button>
-        <Link to={`/employees/${props.employees.id}`}>
-          <button>Details</button>
-        </Link>
+        <button
+          type="button"
+          onClick={() => {
+            props.history.push(`/employees/${props.employees.id}/details`);
+          }}
+        >
+          Details
+        </button>
       </div>
     </div>
   );

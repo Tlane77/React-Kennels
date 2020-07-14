@@ -32,4 +32,14 @@ export default {
       body: JSON.stringify(editedEmployee),
     }).then((data) => data.json());
   },
+  // Add this method to the AnimalManager object
+  getRandomId() {
+    return fetch(`${remoteURL}/employees`)
+      .then((result) => result.json())
+      .then((employees) => {
+        const randomIndex = Math.floor(Math.random() * employees.length);
+        const randomEmployee = employees[randomIndex];
+        return randomEmployee.id;
+      });
+  },
 };

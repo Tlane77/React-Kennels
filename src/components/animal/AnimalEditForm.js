@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
 import AnimalManager from "../../modules/AnimalManager";
 import "./AnimalForm.css";
+import EmployeeManager from "../../modules/EmployeeManager";
 
 const AnimalEditForm = (props) => {
-  const [animal, setAnimal] = useState({ name: "", breed: "" ,quote:"",picture:"" });
+  const [animal, setAnimal] = useState({
+    name: "",
+    breed: "",
+    quote: "",
+    picture: "",
+    employeeId: "",
+  });
+  const [employees, setEmployee] = useState([])
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFieldChange = (evt) => {
@@ -20,10 +28,10 @@ const AnimalEditForm = (props) => {
     const editedAnimal = {
       id: props.match.params.animalId,
       name: animal.name,
-        breed: animal.breed,
-        quote: animal.quote,
-      picture: animal.picture
-      
+      breed: animal.breed,
+      quote: animal.quote,
+      picture: animal.picture,
+      employeeId: animal.employeeId
     };
 
     AnimalManager.update(editedAnimal).then(() =>
@@ -33,10 +41,14 @@ const AnimalEditForm = (props) => {
 
   useEffect(() => {
     AnimalManager.get(props.match.params.animalId).then((animal) => {
-      setAnimal(animal);
-      setIsLoading(false);
+      EmployeeManager.getAll().then((employees) => {
+        console.log("employee response",employees)
+        setEmployee(employees);
+        setAnimal(animal);
+        setIsLoading(false);
+      });
     });
-  }, []);
+  }, [props.match.params.animalId]);
 
   return (
     <>
@@ -63,6 +75,20 @@ const AnimalEditForm = (props) => {
             />
             <label htmlFor="breed">Breed</label>
           </div>
+
+          <select
+            className="form-control"
+            id="employeeId"
+            value={animal.employeeId}
+            onChange={handleFieldChange}
+          >
+            {employees.map((employee) => (
+              <option key={employee.id} value={employee.id}>
+                {employee.name}
+              </option>
+            ))}
+          </select>
+          <label htmlFor="employeeId">Employee</label>
           <div className="alignRight">
             <button
               type="button"

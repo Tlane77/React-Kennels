@@ -32,4 +32,14 @@ export default {
       body: JSON.stringify(editedLocation),
     }).then((data) => data.json());
   },
+  // Add this method to the AnimalManager object
+  getRandomId() {
+    return fetch(`${remoteURL}/locations`)
+      .then((result) => result.json())
+      .then((locations) => {
+        const randomIndex = Math.floor(Math.random() * locations.length);
+        const randomLocation = locations[randomIndex];
+        return randomLocation.id;
+      });
+  },
 };

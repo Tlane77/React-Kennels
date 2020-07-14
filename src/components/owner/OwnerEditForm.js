@@ -38,7 +38,7 @@ const OwnerEditForm = (props) => {
       setOwner(owner);
       setIsLoading(false);
     });
-  }, []);
+  }, [props.match.params.ownerId]);
 
   return (
     <>
