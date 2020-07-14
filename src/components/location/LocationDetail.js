@@ -3,14 +3,16 @@ import LocationManager from "../../modules/LocationManager";
 import "./LocationDetail.css";
 
 const LocationDetail = (props) => {
-  const [location, setLocation] = useState({ name: "", quote: "", picture: "" });
+  const [location, setLocation] = useState({ name: "",title:"", quote: "", picture: "location.png" });
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     //get(id) from AnimalManager and hang on to the data; put it into state
     LocationManager.get(props.locationId).then((location) => {
       setLocation({
-        locations: location.name,
+        name: location.name,
+        title: location.title,
         quote: location.quote,
+        picture: location.picture
       });
       setIsLoading(false);
     });
@@ -27,7 +29,7 @@ const LocationDetail = (props) => {
     <div className="card">
       <div className="card-content">
         <picture>
-          <img src={require("./location.png")} alt="Location" />
+          <img src={require(`./${location.picture}`)} alt="Location" />
         </picture>
         <h3>
           Name: <span style={{ color: "darkslategrey" }}>{location.name}</span>

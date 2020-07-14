@@ -6,7 +6,7 @@ const OwnerDetail = (props) => {
   const [owner, setOwner] = useState({
     name: "",
     quote: "",
-    picture: ""
+    picture: "owner.png"
   });
   const [isLoading, setIsLoading] = useState(true);
 
@@ -34,7 +34,7 @@ const OwnerDetail = (props) => {
     <div className="card">
       <div className="card-content">
         <picture>
-          <img src={require("./owner.png")} alt="Owner" />
+          <img src={require(`./${owner.picture}`)} alt="Owner" />
         </picture>
         <h3>
           Name: <span style={{ color: "darkslategrey" }}>{owner.name}</span>

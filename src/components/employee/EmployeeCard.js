@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import "../Kennel.css";
 import "./Employee.css";
+import { firstLetterCase } from "../../modules/helpers";
 
 const EmployeeCard = (props) => {
   return (
@@ -10,22 +11,30 @@ const EmployeeCard = (props) => {
         <picture>
           <img
             className="employeeImg"
-            src={require(`${props.employees.picture}`)}
+            src={require(`./${props.employees.picture}`)}
             alt="Employee"
           />
         </picture>
         <h3>
           Employee:{" "}
-          <span className="card-employeename">{props.employees.name}</span>
+          <span className="card-employeeName">
+            {firstLetterCase(props.employees.name)}
+          </span>
         </h3>
         <p>
           Quote:{" "}
-          <span className="card-employeename">{props.employees.quote}</span>
+          <span className="card-employeeName">{props.employees.quote}</span>
         </p>
-        <p>
+        {/* <p>
           Picture:{" "}
-          <span className="card-employeename">{props.employees.picture}</span>
-        </p>
+          <span className="card-employeeName">{props.employees.picture}</span>
+        </p> */}
+        <button
+          type="button"
+          onClick={() => props.history.push(`/employees/${props.employees.id}/edit`)}
+        >
+          Edit
+        </button>
         <button
           type="button"
           onClick={() => props.deleteEmployee(props.employees.id)}

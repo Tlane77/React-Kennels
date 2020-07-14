@@ -6,7 +6,7 @@ const EmployeeDetail = (props) => {
   const [employee, setEmployee] = useState({
     name: "",
     quote: "",
-    picture: "",
+    picture: ""
   });
   const [isLoading, setIsLoading] = useState(true);
 
@@ -14,8 +14,11 @@ const EmployeeDetail = (props) => {
     //get(id) from AnimalManager and hang on to the data; put it into state
     EmployeeManager.get(props.employeeId).then((employee) => {
       setEmployee({
-        employees: employee.name,
+        name: employee.name,
         quote: employee.quote,
+        picture:employee.picture
+
+  
       });
       setIsLoading(false);
     });
@@ -32,9 +35,11 @@ const EmployeeDetail = (props) => {
   return (
     <div className="card">
       <div className="card-content">
-        <picture>
-          <img src={require("./employee.png")} alt="Employee" />
-        </picture>
+        {(employee.picture !== "") &&
+          <picture>
+            <img src={require(`./${employee.picture}`)} alt="Employee" />
+          </picture>
+        }
         <h3>
           Name: <span style={{ color: "darkslategrey" }}>{employee.name}</span>
         </h3>
