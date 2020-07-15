@@ -2,42 +2,38 @@
   "animals": [
     {
       "id": 1,
-      "name": "Doodles",
-      "breed": "German Shepherd",
-      "quote": "Top Rated Doggie DayCare in Nashville",
-      "picture": "dogA.png",
-      "employeeId": "5"
-    },
-    {
-      "id": 2,
-      "name": "Dougie",
-      "breed": "German Shepherd",
-      "quote": "Top Rated Doggie DayCare in Nashville",
-      "picture": "dogB.png",
-      "employeeId": "2"
+      "name": "Decker",
+      "breed": "German Shepherd mix",
+      "quote": "Top Rated Doggie DayCare in Nashville-NW",
+      "picture": "https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_1280.jpg",
+      "employeeId": "4"
     },
     {
       "id": 3,
-      "name": "Esme",
-      "breed": "Pitbull",
-      "quote": "Top Rated Doggie DayCare in Nashville",
-      "picture": "dogB.png",
-      "employeeId": 1
+      "name": "Lucky",
+      "breed": "German Shepherd",
+      "quote": "Top Rated Doggie DayCare in Nashville-NW",
+      "picture": "https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_1280.jpg",
+      "employeeId": "4"
     },
     {
       "id": 4,
-      "name": "Jack",
-      "breed": "Big cat",
-      "quote": "Top Rated Doggie DayCare in Nashville",
-      "picture": "dogB.png",
-      "employeeId": 1
+      "name": "Mo",
+      "breed": "German Shepherd",
+      "quote": "Top Rated Doggie DayCare in Nashville-NW",
+      "picture": "https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_1280.jpg",
+      "employeeId": "5"
     },
     {
-      "name": "Angus",
-      "breed": "Gerbil",
-      "id": 5,
-      "employeeId": 2
+      "name": "Rosco the Raccoon",
+      "breed": "Raccoon",
+      "quote": "",
+      "picture": "https://img.resized.co/buzz_ie/eyJkYXRhIjoie1widXJsXCI6XCJodHRwczpcXFwvXFxcL21lZGlhLmJ1enouaWVcXFwvdXBsb2Fkc1xcXC8yMDE4XFxcLzExXFxcLzE3MTY0NjUyXFxcL1JhY29vbi0xMDI0eDUzOS5wbmdcIixcIndpZHRoXCI6NzAwLFwiaGVpZ2h0XCI6MzcwLFwiZGVmYXVsdFwiOlwiaHR0cHM6XFxcL1xcXC93d3cuYnV6ei5pZVxcXC9pXFxcL25vLWltYWdlLnBuZ1wifSIsImhhc2giOiJmODZhNzUyZDk3YzI1YmM4YmU1NWY1ZmUxYzk2NmM3NDUzMDA0YjY3In0=/racoon-1024x539.png",
+      "id": 6,
+      "employeeId": "5"
+
     }
+    
   ],
   "locations": [
     {
@@ -67,32 +63,35 @@
   ],
   "employees": [
     {
-      "id": 2,
-      "name": "Jordan Nelson",
-      "quote": "Top Rated Doggie DayCare in Nashville",
-      "picture": "employee.png",
-      "employeeId": 2
-    },
-    {
-      "id": 3,
-      "name": "Zoe LeBlanc",
-      "quote": "Top Rated Doggie DayCare in Nashville",
-      "picture": "employee.png",
-      "employeeId": 3
-    },
-    {
       "id": 4,
       "name": "Blaise Roberts",
       "quote": "Top Rated Doggie DayCare in Nashville",
       "picture": "employee.png",
-      "employeeId": 4
+      "locationId": 2
+
     },
     {
       "id": 5,
       "name": "Jay Z",
       "quote": "Top Rated Doggie DayCare in Nashville",
       "picture": "employee.png",
-      "employeeId": 5
+      "locationId": 3
+    },
+    {
+      "id": 3,
+      "name": "Thomas Jones",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "employee.png",
+      "locationId": 2
+
+    },
+    {
+      "id": 1,
+      "name": "Blaise Roberts",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "employee.png",
+      "locationId": 2
+
     }
   ],
   "owners": [
@@ -105,6 +104,18 @@
     {
       "id": 2,
       "name": "Rosey Rose",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "owner.png"
+    },
+    {
+      "id": 3,
+      "name": "Bodacious Brenda",
+      "quote": "Top Rated Doggie DayCare in Nashville",
+      "picture": "owner.png"
+    },
+    {
+      "id": 4,
+      "name": "Savory Sage",
       "quote": "Top Rated Doggie DayCare in Nashville",
       "picture": "owner.png"
     }

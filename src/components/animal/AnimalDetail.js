@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AnimalManager from "../../modules/AnimalManager";
 import "./AnimalDetail.css";
-import { firstLetterCase } from "../../modules/helpers";
+// import { firstLetterCase } from "../../modules/helpers";
 
 
 const AnimalDetail = (props) => {
@@ -9,7 +9,7 @@ const AnimalDetail = (props) => {
     name: "",
     breed: "",
     quote: "",
-    picture: "dogA.png",
+    picture: "",
   });
   const [isLoading, setIsLoading] = useState(true);
 
@@ -41,12 +41,13 @@ const AnimalDetail = (props) => {
     <div className="card">
       <div className="card-content">
         <picture>
-          <img src={require(`./${animal.picture}`)} alt="My Dog" />
+          <img src={animal.picture} alt="My Dog" />
         </picture>
         <h3>
           Name: <span style={{ color: "darkslategrey" }}>{animal.name}</span>
         </h3>
         <p>Breed: {animal.breed}</p>
+        <p>Quote: {animal.quote}</p>
         <button type="button" disabled={isLoading} onClick={handleDelete}>
           Discharge
         </button>

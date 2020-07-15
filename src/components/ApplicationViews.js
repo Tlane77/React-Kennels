@@ -19,6 +19,7 @@ import LocationEditForm from "./location/LocationEditForm";
 import EmployeeEditForm from "./employee/EmployeeEditForm";
 import OwnerEditForm from "./owner/OwnerEditForm";
 import EmployeeWithAnimals from "./employee/EmployeeWithAnimals";
+import LocationWithEmployees from "./location/LocationWithEmployees";
 
 // import AnimalCard from "./animal/AnimalCard";
 // only include these once they are built - previous practice exercise
@@ -127,6 +128,12 @@ const ApplicationViews = () => {
         path="/locations/new"
         render={(props) => {
           return <LocationForm {...props} />;
+        }}
+      />
+      <Route
+        path="/locations/:locationId(\d+)/details"
+        render={(props) => {
+          return <LocationWithEmployees {...props} />;
         }}
       />
       {/*

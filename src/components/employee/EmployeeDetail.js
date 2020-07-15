@@ -35,11 +35,11 @@ const EmployeeDetail = (props) => {
   return (
     <div className="card">
       <div className="card-content">
-        {(employee.picture !== "") &&
+        {employee.picture !== "" && (
           <picture>
-            <img src={require(`./${employee.picture}`)} alt="Employee" />
+            <img src={employee.picture} alt="Employee" />
           </picture>
-        }
+        )}
         <h3>
           Name: <span style={{ color: "darkslategrey" }}>{employee.name}</span>
         </h3>

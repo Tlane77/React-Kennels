@@ -73,7 +73,16 @@ const AnimalEditForm = (props) => {
               id="breed"
               value={animal.breed}
             />
-            <label htmlFor="breed">Breed</label>
+            <label htmlFor="quote">Breed</label>
+            <input
+              type="text"
+              required
+              className="form-control"
+              onChange={handleFieldChange}
+              id="name"
+              value={animal.quote}
+            />
+            <label htmlFor="name">Location</label>
           </div>
 
           <select

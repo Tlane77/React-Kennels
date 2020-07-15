@@ -7,7 +7,8 @@ const AnimalForm = (props) => {
     name: "",
     breed: "",
     quote: "",
-    picture: "./dog.png",
+    picture: ""
+   
   });
   const [isLoading, setIsLoading] = useState(false);
 
@@ -51,6 +52,15 @@ const AnimalForm = (props) => {
               placeholder="Breed"
             />
             <label htmlFor="breed">Breed</label>
+
+            <input
+              type="text"
+              required
+              onChange={handleFieldChange}
+              id="picture"
+              placeholder="Picture"
+            />
+            <label htmlFor="Picture">Picture</label>
           </div>
           <div className="alignRight">
             <button

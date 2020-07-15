@@ -24,9 +24,7 @@ const LocationCard = (props) => {
         <p>Title: Island of Pets</p>
         <p>
           Quote:{" "}
-          <span className="card-locationName">
-            {props.locations.quote}
-          </span>
+          <span className="card-locationName">{props.locations.quote}</span>
         </p>
         <button
           type="button"
@@ -46,6 +44,14 @@ const LocationCard = (props) => {
         <Link to={`/locations/${props.locations.id}`}>
           <button>Details</button>
         </Link>
+        <button
+          type="button"
+          onClick={() => {
+            props.history.push(`/locations/${props.locations.id}/details`);
+          }}
+        >
+          Employees
+        </button>
       </div>
     </div>
   );
