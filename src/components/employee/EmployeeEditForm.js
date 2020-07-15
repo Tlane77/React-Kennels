@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import EmployeeManager from "../../modules/EmployeeManager";
 import "./EmployeeForm.css";
+import LocationManager from "../../modules/LocationManager";
+
 
 const EmployeeEditForm = (props) => {
   const [employee, setEmployee] = useState({
@@ -9,6 +11,7 @@ const EmployeeEditForm = (props) => {
     picture: ""
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [locations, setLocations] = useState([]);
 
   const handleFieldChange = (evt) => {
     const stateToChange = { ...employee };
@@ -26,6 +29,8 @@ const EmployeeEditForm = (props) => {
       name: employee.name,
       quote: employee.quote,
       picture: employee.picture,
+      // any kind of input coming back as string
+      locationId: parseInt(employee.locationId),
     };
 
     EmployeeManager.update(editedEmployee).then(() =>
@@ -35,8 +40,14 @@ const EmployeeEditForm = (props) => {
 
   useEffect(() => {
     EmployeeManager.get(props.match.params.employeeId).then((employee) => {
-      setEmployee(employee);
-      setIsLoading(false);
+      // getting all of the locations using API calls
+      LocationManager.getAll().then((locations) => {
+        setLocations(locations);
+        // get locations before you se employees
+        setEmployee(employee);
+        // controlling button
+        setIsLoading(false);
+      })
     });
   }, [props.match.params.employeeId]);
 
@@ -64,6 +75,18 @@ const EmployeeEditForm = (props) => {
               value={employee.quote}
             />
             <label htmlFor="quote">quote</label>
+            <select
+              className="form-control"
+              id="locationId"
+              value={employee.locationId}
+              onChange={handleFieldChange}
+            >
+              {locations.map((location) => (
+                <option key={location.id} value={location.id}>
+                  {location.name}
+                </option>
+              ))}
+            </select>
           </div>
           <div className="alignRight">
             <button
